@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Color</title>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <script>
+      var userName = prompt('Il tuo nome:');
+      var userLastName = prompt('Il tuo cognome:');
+      var color = prompt('Il tuo colore preferito:');
+      console.log('Nome:', userName, 'Cognome:', userLastName, 'Colore:', color);
+
+      // H1 blue se nome = Martino
+      if(userName == 'Martino' || userName == 'martino' || userName == 'MARTINO'){
+        // H1 rosso se anche cognome = Scalvini
+        if (userLastName == 'Scalvini' || userLastName == 'scalvini' || userLastName == 'SCALVINI') {
+          document.writeln('<h1 id="title" class="red"></h1>');
+        }
+        else{
+          document.writeln('<h1 id="title" class="blue"></h1>');
+        }
+      }
+      // Altrimenti H1 giallo
+      else{
+        document.writeln('<h1 id="title"></h1>');
+      }
+
+      document.getElementById('title').innerHTML = userName + userLastName + color + '19';
+    </script>
+  </body>
+</html>
